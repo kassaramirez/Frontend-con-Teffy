@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Clase-11</title>
+  </head>
+  <style>
+    :root {
+      --white: #ffffff;
+      --black: #000000;
+      --very-light-pink: #c7c7c7;
+      --text-input-field: #f7f7f7;
+      --hospital-green: #acd9b2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    ul, li {
+      list-style: none;
+      color: var(--very-light-pink);
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 2px 10px 2px 16px;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: var(--md);
+      color: var(--very-light-pink);
+      border: 1px solid var(--white);
+      margin: 0 18px 0 0;
+      
+    }
+
+    ul li a:hover {
+        border: 1px solid var(--hospital-green);
+        color: var(--hospital-green);
+        border-radius: 10px ;
+        padding: 8px;
+    }
+
+    p {
+        color: var(--very-light-pink);
+        font-size: var(--sm);
+        margin-right: 12px;
+    }
+
+    nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+    margin: 0;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .navbar-left {
+        display: flex;
+        margin-left: 12px;
+        height: 60px;
+    }
+
+    .navbar-right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-cart {
+        position: relative;
+    }
+
+    .navbar-cart div{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: var(--hospital-green);
+        font-size: var(--sm);
+        font-weight: bold;
+        border-radius: 50%;
+        top: -6px;
+        right: -3px;
+        color: var(--black);
+        display: flex;
+        justify-content: center; /*centra horizontal*/
+        align-items: center; /*centra vertical*/
+    }
+
+    @media (max-width : 640px) {
+        .menu{
+            display: block; /*lo hace aparecer en pantallas grandes*/
+        }
+
+        .navbar-left ul {
+            display: none;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+   
+
+  </style>
+
+  <body>
+    <nav>
+      <img src="./icons/icon_menu.svg" alt="menu" class="menu" />
+
+      <div class="navbar-left">
+        <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo"/>
+
+        <ul>
+          <li>
+            <a href="/">All</a>
+          </li>
+
+          <li>
+            <a href="/">Clothes</a>
+          </li>
+
+          <li>
+            <a href="/">Electronics</a>
+          </li>
+
+          <li>
+            <a href="/">Furnitures</a>
+          </li>
+
+          <li>
+            <a href="/">Toys</a>
+          </li>
+
+          <li>
+            <a href="/">Others</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <ul>
+          <li>
+             <p>platzi@platzi.com</p> 
+          </li>
+
+          <li class="navbar-cart">
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="cart" />
+            <div>2</div>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </body>
+</html>
